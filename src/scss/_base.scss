@@ -1,0 +1,87 @@
+$backgroundColor: #242424;
+$darkBackground: #242424;
+$textColor: #727272;
+$backgroundInput: #353434;
+$orangeColor: #ea6016;
+$lightText: #a5abad;
+$lightGreen: rgb(37, 224, 109);
+$lightYellow: rgb(227, 241, 25);
+$redColor: #ff0000;
+
+@mixin transition {
+	transition: all 0.25s linear;
+}
+@mixin align-flex {
+	display: flex;
+	align-items: center;
+}
+
+@mixin d-flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	scroll-behavior: smooth;
+	font-size: 62.5%;
+	cursor: default;
+	font-family: 'Roboto', serif;
+	text-transform: capitalize;
+}
+body {
+background: linear-gradient(to bottom, var(--black2, #242424) 0%, transparent 100%);;
+background-color: $darkBackground;
+
+}
+ul,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: unset;
+}
+#model__overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba($color: #242424, $alpha: 0.8);
+	z-index: 1;
+}
+@keyframes slipDown {
+	from {
+		opacity: 0;
+		max-height: 0;
+	}
+	to {
+		opacity: 1;
+		max-height: 33rem;
+	}
+}
+
+/* SCROLL BAR */
+body::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	border-radius: 10px;
+	background-color: var(--black-color);
+}
+body::-webkit-scrollbar {
+	width: 0.6rem;
+	height: 0.6rem;
+	background-color: var(---black-color);
+}
+body::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	background-color: var(--text-color);
+}
